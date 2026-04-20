@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+}
+
+
+body{
+    background-color: black;
+}
+
+.divGeral{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#divPedidos{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border: solid 1px gray;
+    display: grid;
+    grid-template-rows: 1fr 15fr;
+}
+
+.main{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.disponivelSty{
+    background-color: aliceblue;
+    height: 10vh;
+    padding: 10px;
+    border-radius: 15px;
+    border-left: solid 10px rgb(2, 2, 61);
+}
+
+.carrinhoSty{
+    background-color: aliceblue;
+    height: 8vh;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    border-left: solid 10px rgb(2, 2, 61);
+}
+
+#carrinhoGeral{
+    display: grid;
+    grid-template-rows: 2fr 12fr 1fr;
+    border: solid 1px rgb(43, 43, 43);
+    background-color: rgb(247, 237, 108);
+}
+
+
+#itens_painel{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+#opcoesCar{
+    border-top: dotted 1px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.barra_p{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px gray;
+}
+
+.barra_p input{
+    width: 15vw;
+    padding: 5px;
+    border-radius: 8px;
+    border: solid 1px gray;
+}
+
+.botaoDiv{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botaoDiv button{
+    padding: 5px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.botaoDiv button:hover{
+    background-color: rgb(151, 1, 1);
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog input{
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+

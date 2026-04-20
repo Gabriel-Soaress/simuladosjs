@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="digGeral" class="divGeral">
+        <div id="divPedidos">
+            <div class="barra_p">
+
+                <p id="horario"></p>
+
+                <input type="text" name="pesquisa" id="pesquisa" placeholder="Nome do Produto">
+            </div>
+
+            <div class="main">
+                <div class="botaoDiv">
+                    <h2>Produtos:</h2>
+                    <dialog id="cadastro_prod">
+                        <h3>Cadastro produto</h3>
+                        <form action="#" id="formProduto">
+                            <label for="ref">Ref</label>
+                            <input name="ref" id="refProduto" type="number">
+
+                            <label for="nome">Nome</label>
+                            <input name="nome" id="nomeProduto" type="text">
+
+                            <label for="preco">Preço</label>
+                            <input name="preco" id="precoProduto" type="number">
+
+                            <button type="button" id="botao_cads">Salvar</button>
+                        </form>
+
+                    </dialog>
+                    <button id="adc_produto"  class="adc_produto">Criar+</button>
+                </div>
+
+                <div id="itens_painel">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="carrinhoGeral">
+
+            <h3>Carrinho: </h3>
+
+            <div id="carrinho">
+
+            </div>
+
+            <div id="opcoesCar">
+                <p id="ValorCar">Valor total: </p>
+                <button>Finalizar</button>
+                <button>Limpar</button>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

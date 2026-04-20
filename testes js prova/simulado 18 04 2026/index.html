@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="divPai" class="divGeral">
+        
+        <div id="divLateralCont" class="divLado">
+            <h1>Contagem Dados: </h1>
+            <p id="Contar">Num de Defeitos: 0</p>
+        </div>
+
+        <div id="divPrincipal" class="divMeio">
+            <form action="#" id="formDados">
+                
+                <label for="Produto">Produto:</label>
+                <input id="nomeInp" type="text">
+
+                <label for="Tamanho">Tamanho:</label>
+                <input id="tamanhoInp" type="number">
+
+                <label for="Categoria">Categoria:</label>
+                <select id="tipoInp" name="Categoria" id="">
+                    <option value="0" selected >Tipo De defeito</option>
+                    <option value="Costura">Costura</option>
+                    <option value="Sola">Sola</option>
+                    <option value="Tecido">Tecido</option>
+                    <option value="Cores">Cores</option>
+                </select>
+
+                <button onclick="criaCard()" id="botao" type="button">Salvar</button>
+            </form>
+
+            <h3>Defeitos registrados: </h3>
+            <div id="divCards">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
