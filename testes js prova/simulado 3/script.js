@@ -14,8 +14,9 @@ const itens_painel = document.getElementById('itens_painel')
 const carrinho = document.getElementById('carrinho')
 const totalPreco = document.getElementById('ValorCar')
 const pesquisa = document.getElementById('pesquisa')
-
-ValorCar
+const finalizar = document.getElementById('pConcluido')
+const limpar = document.getElementById('pLimpar')
+const btnLimparTudo = document.getElementById('limpaTudo')
 
 let valorCarrinho = 0;
 
@@ -124,9 +125,62 @@ function renderizarPainel(listaParaDesenhar){
                 cardCarrinho.remove()
             })
 
+            limpar.addEventListener('click',()=>{
+                valorCarrinho = 0;
+                totalPreco.innerText = `Valor total: ${valorCarrinho}`
+                cardCarrinho.remove()
+            })
+
+
             
             carrinho.appendChild(cardCarrinho)
         })
     })
 }
 
+finalizar.addEventListener('click',()=>{
+    let numPedido  = Math.floor(Math.random() * 100) + 1;
+
+    const modalFinal = document.createElement('dialog')
+        modalFinal.classList.add('modal_final')
+        modalFinal.innerHTML = `
+        <h1>Pedido Nº ${numPedido}</h1>
+        <h2>Compra finalizada!</h2>
+        <p>Valor total: R$ ${valorCarrinho}</p>
+        <br/>
+        <p>Agradecemos pela sua compra e pela confiança em nosso trabalho. Ficamos muito felizes em poder atendê-lo e esperamos que o produto atenda às suas expectativas. Qualquer dúvida ou necessidade, estamos à disposição. Esperamos vê-lo novamente em breve!</p>
+        `
+        document.body.appendChild(modalFinal)
+        modalFinal.showModal()
+    setTimeout(()=>{
+        modalFinal.close()
+        document.body.removeChild(modalFinal)
+    },4000)
+})
+
+btnLimparTudo.addEventListener('click',()=>{
+    if(confirm("Tem certeza que deseja limpar tudo?")){
+    window.location.reload()}
+})
+
+
+btnLimparTudo.addEventListener('mouseenter',()=>{
+    btnLimparTudo.innerText = "Tem certeza?"
+    btnLimparTudo.style.backgroundColor = 'orange';
+})
+
+btnLimparTudo.addEventListener('mouseleave',()=>{
+    btnLimparTudo.innerText = "Limpar Tudo"
+    btnLimparTudo.style.backgroundColor = '';
+})
+
+// // Tire o evento do limpar de dentro do renderizarPainel e coloque solto no final do script:
+
+// limpar.addEventListener('click', () => {
+//     // 1. Zera a matemática
+//     valorCarrinho = 0;
+//     totalPreco.innerText = `Valor total: ${valorCarrinho}`;
+    
+//     // 2. Apaga o HTML de todos os cards do carrinho de uma vez só!
+//     carrinho.innerHTML = ""; 
+// });
