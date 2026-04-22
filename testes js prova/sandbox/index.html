@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="divPai">
+        <form action="" id="meuForm">
+            <h2>Cadastro</h2>
+
+            <label for="nome">UserName</label>
+            <input name="nome" required id="nomeF" type="text">
+
+            <label for="nome">Idade</label>
+            <input name="idade" required type="number" id="idadeF">
+                
+            <label for="senha">Senha</label>
+            <input name="senha" required type="password" id="senhaf">
+            
+            <label for="senhaConf">Confirma senha:</label>
+            <input name="senhaConf" required type="password" id="senhaConf">
+
+            <p id="msgErro"></p>
+
+            <button onclick="salvaUser()" type="submit">Cadastrar</button>
+            <p id="login">Logar</p>
+        </form>
+
+        <form action="" id="loginForm">
+            <h2>Login</h2>
+            <label for="nome">UserName</label>
+            <input name="nome" required id="nomeL" type="text">
+                
+            <label for="senha">Senha</label>
+            <input name="senha" required type="password" id="senhaL">
+
+            <p id="msgErroL"></p>
+
+            <button id="botaoLogin" type="submit">Logar</button>
+            <p id="cadBotao">Cadastre-se</p>
+        </form>
+    </div>
+</body>
+</html>
