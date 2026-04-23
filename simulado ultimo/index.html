@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="Header_vet">
+        <img src="imgs/pngwing.com.png" alt="">
+        <input type="text" id="inputPes" placeholder="pesquisa tutor">
+        <p id="relogio"></p>
+    </header>
+
+    <main>
+        <div id="formDiv">
+            <form action=" " id="meuForm">
+                <span>
+                    <label for="nomeP">Nome do Pet:</label>
+                    <input name="nomeP" id="nomeP" required type="text">
+                </span>
+            
+
+                <span>
+                    <label for="nomeT">Nome do Tutor:</label>
+                    <input name="nomeT" id="nomeT" required type="text">
+                </span>
+
+                <span>
+                    <label for="especie">Especie: </label>
+                    <select name="Especie" id="especieS">
+                        <option value="0" selected>Selecione</option>
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Ave">Ave</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </span>
+
+                <button class="botaoGeral" id="btnForm">Salvar</button>
+            </form>
+
+            <p id="msgform"></p>
+        </div>
+        
+
+        <dialog id="modalChamar"> <p id="textoChamar"></p> </dialog>
+
+        
+        <div id="listaEspera">
+            <h2>Lista de Espera: </h2>
+
+            
+
+        </div> 
+
+        
+    </main>
+</body>
+</html>
